@@ -1,4 +1,4 @@
-# Dataset Documentation  
+# US Residential Energy Adoptions
 
 ## Dataset Description  
 This dataset, published in *Scientific Data* (Fuentes et al. 2025), provides self-reported information on residential energy decisions across the United States. Covering the period 2010–2023, the survey-based data captures household adoption patterns for rooftop solar, electric vehicles, and heat pumps, alongside demographic and socioeconomic attributes. Respondents provided insights into motivations, barriers, and perceptions influencing their technology choices.  
