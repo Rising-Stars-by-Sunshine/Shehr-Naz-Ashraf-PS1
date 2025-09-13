@@ -9,22 +9,61 @@ The dataset is valuable for analyzing equity and accessibility in the U.S. energ
 
 ## Data Dictionary  
 
-| Column Name             | Description                                                      | Type        |
-|--------------------------|------------------------------------------------------------------|-------------|
-| `respondent_id`          | Unique anonymized identifier for each household                 | Integer     |
-| `year`                   | Survey year (2010–2023)                                         | Integer     |
-| `state`                  | U.S. state of residence                                         | Categorical |
-| `income_bracket`         | Reported household income range                                 | Categorical |
-| `education_level`        | Highest level of education attained                             | Categorical |
-| `housing_type`           | Type of residence (single-family, multi-family, rental, etc.)   | Categorical |
-| `solar_adoption`         | Indicator of rooftop solar adoption (1 = yes, 0 = no)           | Binary      |
-| `ev_adoption`            | Indicator of electric vehicle ownership (1 = yes, 0 = no)       | Binary      |
-| `heat_pump_adoption`     | Indicator of heat pump adoption (1 = yes, 0 = no)               | Binary      |
-| `decision_factors`       | Self-reported drivers (e.g., cost, environment, reliability)    | Text        |
-| `barriers`               | Reported barriers to adoption (e.g., upfront cost, awareness)   | Text        |
-| `policy_awareness`       | Awareness of incentives or state/federal policies (1/0)         | Binary      |
+## Data Dictionary  
 
-*(Table simplified for subset; see original publication for full schema.)*  
+| Column Name                        | Description                                                                                                   | Type        |
+|------------------------------------|---------------------------------------------------------------------------------------------------------------|-------------|
+| `geo_state_zip`                    | QA/QC of respondent reported state & ZIPCODE                                                                  | String      |
+| `geo_review`                       | Paste of `state_chk`, `zcta_chk`, `county_chk`                                                                | String      |
+| `state_chk`                        | Whether reported state is same as IP address state                                                            | Binary      |
+| `zcta_chk`                         | Whether reported state is same as assigned ZCTA                                                               | Binary      |
+| `county_chk`                       | Whether assigned county (from ZCTA) is same as IP address county                                               | Binary      |
+| `region`                           | Region of US assigned, based on assigned state                                                                | Categorical |
+| `assigned_state`                   | State assigned by researchers (uses reported state unless missing, then IP address state)                      | Categorical |
+| `reported_state`                   | State respondent claimed as residence                                                                         | Categorical |
+| `zcta_state`                       | State in which assigned ZCTA occurs                                                                           | Categorical |
+| `assigned_county_fip`              | 5-digit ID code for assigned county                                                                           | Integer     |
+| `assigned_county`                  | Name of county assigned based on ZCTA                                                                         | Categorical |
+| `urb_rural`                        | Urban or Rural classification                                                                                 | Categorical |
+| `IECC15`                           | Climate Zone (International Energy Conservation Code 2015), values 1–7                                        | Integer     |
+| `IECC21`                           | Climate Zone (International Energy Conservation Code 2021), values 1–7                                        | Integer     |
+| `BA15`                             | Building America Climate Zone (IECC 2015): Hot-Humid; Mixed-Humid; Hot-Dry; Mixed-Dry; Cold; Very-Cold; etc.   | Categorical |
+| `BA21`                             | Building America Climate Zone (IECC 2021): Hot-Humid; Mixed-Humid; Hot-Dry; Mixed-Dry; Cold; Very-Cold; etc.   | Categorical |
+| `Moisture15`                       | Moisture Code (IECC 2015): A, B, or C                                                                         | Categorical |
+| `Moisture21`                       | Moisture Code (IECC 2021): A, B, or C                                                                         | Categorical |
+| `USDA_Hardiness_Zone`              | USDA plant hardiness zone (based on ZCTA)                                                                     | Integer     |
+| `USDA_temp_range`                  | USDA plant hardiness temperature range (based on ZCTA)                                                        | String      |
+| `USDA_Zone_Title`                  | USDA plant hardiness zone title (based on ZCTA)                                                               | String      |
+| `own_rent`                         | Own or rent current home                                                                                      | Categorical |
+| `reported_age`                     | Respondent age                                                                                                | Integer     |
+| `children`                         | Number of children in household (≤17)                                                                         | Integer     |
+| `age18_64`                         | Household composition: Adults aged 18–64                                                                      | Integer     |
+| `age65plus`                        | Household composition: Older adults aged 65+                                                                  | Integer     |
+| `hh_size2`                         | Total household size (all age groups, including respondent)                                                    | Integer     |
+| `userlanguage`                     | Language in which survey was conducted                                                                         | Categorical |
+| `hometype`                         | Type of home: Single-family, condo/apartment (≤4 units), duplex/triplex/townhouse                              | Categorical |
+| `gender`                           | Gender identity                                                                                               | Categorical |
+| `race_americanindianoralaskannati` | 1 if respondent identified as American Indian or Alaska Native, 0 otherwise                                   | Binary      |
+| `race_asian`                       | 1 if respondent identified as Asian, 0 otherwise                                                              | Binary      |
+| `race_blackorafricanamerican`      | 1 if respondent identified as Black or African American, 0 otherwise                                          | Binary      |
+| `race_middleeasternornorthafrican` | 1 if respondent identified as Middle Eastern or North African, 0 otherwise                                    | Binary      |
+| `race_nativehawaiianorotherpacifi` | 1 if respondent identified as Native Hawaiian or Other Pacific Islander, 0 otherwise                          | Binary      |
+| `race_otherpleasespecify`          | 1 if respondent identified as Other, 0 otherwise                                                              | Binary      |
+| `race_prefernottosay`              | 1 if respondent preferred not to say, 0 otherwise                                                             | Binary      |
+| `race_white`                       | 1 if respondent identified as White, 0 otherwise                                                              | Binary      |
+| `ethnicity_all`                    | Hispanic/Latino heritage (yes/no)                                                                              | Binary      |
+| `education`                        | Highest level of education obtained                                                                            | Categorical |
+| `hhincome`                         | Household annual income                                                                                       | Continuous  |
+| `mortgagerent`                     | Monthly housing cost (mortgage or rent, narrow range)                                                         | Continuous  |
+| `mortgagerentbins`                 | Monthly housing cost (broader range)                                                                          | Categorical |
+| `homeyrs`                          | Number of years living in current home                                                                        | Integer     |
+| `yrbuilt`                          | Year home was built                                                                                           | Integer     |
+| `homesqft`                         | Home size in square feet                                                                                      | Continuous  |
+| `heatsource`                       | Main fuel used to heat home                                                                                   | Categorical |
+| `waterheatsource`                  | Main fuel used for water heating                                                                              | Categorical |
+| `energyexpenses`                   | Average monthly energy expenses                                                                               | Continuous  |
+| `electricgasbill`                  | Trouble paying electric/gas bill each month (yes/no)                                                          | Binary      |
+
 
 ---
 
