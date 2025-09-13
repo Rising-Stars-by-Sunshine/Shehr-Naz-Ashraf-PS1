@@ -1,5 +1,5 @@
-# Residential Energy Technology Adoption in the U.S.  
-**Research Proposal for STATS 201 – Problem Set 1 (Autumn 2025)**  
+# Residential Energy Adoption in the U.S.  
+**Shehr Naz Ashraf – PS1)**  
 
 ## Abstract  
 This project investigates the social and technological determinants of residential adoption of energy-efficient and renewable technologies in the United States. Using the open-access dataset from *Nature Scientific Data* (Gao et al., 2025), which documents household-level adoption of rooftop solar, electric vehicles (EVs), and heat pumps, the research proposes a machine learning–augmented analysis to examine how socioeconomic, demographic, and geographic factors shape technology diffusion.  
