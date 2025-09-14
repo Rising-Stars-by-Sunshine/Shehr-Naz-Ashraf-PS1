@@ -1,8 +1,8 @@
 # Residential Energy Adoption in the U.S.  
-**Shehr Naz Ashraf – PS1)**  
+**Shehr Naz Ashraf – PS1**  
 
 ## Abstract  
-This project investigates the social and technological determinants of residential adoption of energy-efficient and renewable technologies in the United States. Using the open-access dataset from *Nature Scientific Data* (Gao et al., 2025), which documents household-level adoption of rooftop solar, electric vehicles (EVs), and heat pumps, the research proposes a machine learning–augmented analysis to examine how socioeconomic, demographic, and geographic factors shape technology diffusion.  
+This project investigates the social and technological determinants of residential adoption of energy-efficient and renewable technologies in the United States. Using the open-access dataset from *Nature Scientific Data* (Fuentes et al. 2025), which documents household-level adoption of rooftop solar, electric vehicles (EVs), and heat pumps, the research proposes a machine learning–augmented analysis to examine how socioeconomic, demographic, and geographic factors shape technology diffusion.  
 
 The study frames its inquiry at the intersection of social science and machine learning, guided by the AI Triad: **data** (large-scale household adoption dataset), **algorithms** (ML models for prediction and feature attribution), and **computing power** (scalable training environments). By combining traditional literature review and GenAI-assisted workflows, this project aims to generate insights relevant to equity in the U.S. energy transition and advance reproducible practices under the FAIR and CARE principles.  
 
@@ -41,20 +41,6 @@ Clone repo and run:
 - Run Jupyter Notebook server for interactive analysis.
 
 
-## Conceptual Flowchart
-```
-flowchart TD
-    A[Social Science Problem: Energy Transition Equity] --> B[AI Triad] 
-    B --> C[Data: Household Adoption Dataset (Gao et al., 2025)]
-    B --> D[Algorithms: ML models (classification, regression)]
-    B --> E[Computing Power: Local + Cloud scaling]
-    C --> F[EDA + Preprocessing]
-    D --> F
-    E --> F
-    F --> G[Insights: Determinants of adoption, equity analysis]
-    G --> H[Application Scenarios: Policy, SDG 7, SDG 13]
-```
-
 ## FAIR & CARE Principles
 
 FAIR: Dataset is findable (hosted on Nature Scientific Data & Kaggle), accessible (open license), interoperable (structured tabular format), and reusable (documented variables).
@@ -63,14 +49,15 @@ CARE: While U.S.-focused, analysis is conducted with attention to equity and res
 
 
 ## Repository Structure
+```
 ├── README.md                <- Project overview (this file)
 ├── data/
-│   ├── dataset.csv           <- Open-source dataset subset
-│   └── README.md             <- Dataset description + dictionary
+│   ├── UPGRADE-E_V2.csv     <- Open-source dataset subset
+│   └── README.md            <- Dataset description + dictionary
 ├── code/
-│   ├── eda.ipynb             <- Exploratory Data Analysis notebook
-│   └── README.md             <- Summary of analysis code
-└── requirements.txt          <- List of dependencies
+│   ├── eda.ipynb           <- Exploratory Data Analysis notebook
+└── README.md               <- Summary of analysis code
+```
 
 ## References
 Fuentes, T. L., K. H. McCord, M. J. Martell, et al. 2025. “A Dataset for Understanding Self-Reported Patterns Influencing Residential Energy Decisions.” Scientific Data 12: 1273. https://doi.org/10.1038/s41597-025-05335-8
