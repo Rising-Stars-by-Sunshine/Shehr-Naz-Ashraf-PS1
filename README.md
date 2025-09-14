@@ -40,6 +40,9 @@ Clone repo and run:
 - Install Anaconda or Miniconda.
 - Run Jupyter Notebook server for interactive analysis.
 
+## Conceptual Flowchart
+
+<img width="2854" height="704" alt="image" src="https://github.com/user-attachments/assets/8e5c3e72-6828-42ae-8400-5a659a3d7da2" />
 
 ## FAIR & CARE Principles
 
