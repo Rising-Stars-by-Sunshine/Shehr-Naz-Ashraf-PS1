@@ -50,13 +50,13 @@ CARE: While U.S.-focused, analysis is conducted with attention to equity and res
 
 ## Repository Structure
 ```
-├── README.md                <- Project overview (this file)
+├── README.md               <- Project overview (this file)
 ├── data/
-│   ├── UPGRADE-E_V2.csv     <- Open-source dataset subset
-│   └── README.md            <- Dataset description + dictionary
+│   ├── UPGRADE-E_V2.csv    <- Open-source dataset subset
+│   └── README.md           <- Dataset description + dictionary
 ├── code/
-│   ├── eda.ipynb           <- Exploratory Data Analysis notebook
-└── README.md               <- Summary of analysis code
+└── eda.ipynb               <- Exploratory Data Analysis notebook
+
 ```
 
 ## References
